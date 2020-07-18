@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestTaskClient
+namespace TestTaskClient.Model
 {
     public class Info
     {
