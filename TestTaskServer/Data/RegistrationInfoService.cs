@@ -13,25 +13,23 @@ namespace TestTaskServer.Data
             return TestTaskServerContext.Infoes;
         }
 
-        internal Info AddInfo(InfoRequest value)
+        internal Info PushInfo(InfoRequest value)
         {
             var item = new Info()
             {
                 Id = GetNextId(),
-                UpdateTimestamp = DateTime.Now,
+                UpdateTimestamp = DateTime.UtcNow,
                 ComputerName = value.ComputerName,
                 DiskCFreeSpace = value.DiskCFreeSpace
             };
-            TestTaskServerContext.Infoes.Add(item);
+            TestTaskServerContext.Infoes.Push(item);
             return item;
         }
         private long GetNextId()
         {
             lock (TestTaskServerContext.Infoes)
             {
-                var ret = TestTaskServerContext.NextInfoId;
-                TestTaskServerContext.NextInfoId++;
-                return ret;
+                return TestTaskServerContext.NextInfoId++;
             }
         }
     }

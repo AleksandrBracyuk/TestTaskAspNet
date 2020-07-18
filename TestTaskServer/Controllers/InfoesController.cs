@@ -14,12 +14,11 @@ namespace TestTaskServer.Controllers
 {
     public class InfoesController : Controller
     {
+        
         // GET: Infoes
         public ActionResult Index()
         {
-            var ret = TestTaskServerContext.Infoes;
-            if(ret == null) ret = new List<Info>();
-            return View(ret);
+            return View(TestTaskServerContext.Infoes);
         }
 
     }

@@ -35,9 +35,9 @@ namespace TestTaskClient
 
         private async void TimerTickAsync(object sender, ElapsedEventArgs e)
         {
-            Console.WriteLine("timer start at {0:HH:mm:ss.fff}", e.SignalTime);
             try
             {
+                Console.WriteLine("timer start at {0:HH:mm:ss.fff}", e.SignalTime);
                 await sendDataAsync(Environment.MachineName, this.GetDriverCFreeSpace());
             }
             catch (Exception ex)

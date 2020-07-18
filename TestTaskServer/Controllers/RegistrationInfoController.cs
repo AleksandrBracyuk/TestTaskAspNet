@@ -24,7 +24,7 @@ namespace TestTaskServer.Controllers
         // POST: api/RegistrationInfo
         public IHttpActionResult Post([FromBody]InfoRequest value)
         {
-            var ret = _service.AddInfo(value);
+            var ret = _service.PushInfo(value);
             return Ok(ret);
         }
     }
