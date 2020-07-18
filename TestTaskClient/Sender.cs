@@ -69,6 +69,7 @@ namespace TestTaskClient
                     .AddJsonBody(new InfoRequest()
                     {
                         ComputerName = machineName,
+                        UpdateTimestamp = DateTime.UtcNow,
                         DiskCFreeSpace = freeSpace
                     }); ;
                 var response = await client.PostAsync<Info>(request);

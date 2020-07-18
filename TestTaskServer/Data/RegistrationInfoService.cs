@@ -18,7 +18,7 @@ namespace TestTaskServer.Data
             var item = new Info()
             {
                 Id = GetNextId(),
-                UpdateTimestamp = DateTime.UtcNow,
+                UpdateTimestamp = value.UpdateTimestamp,
                 ComputerName = value.ComputerName,
                 DiskCFreeSpace = value.DiskCFreeSpace
             };
