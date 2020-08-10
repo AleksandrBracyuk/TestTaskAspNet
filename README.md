@@ -1,5 +1,5 @@
 # TestTaskAspNet
-тестовое задание
+тестовое задание на ASP.Net
 
 Как запустить и посмотреть - см. https://youtu.be/KvJBSj1lmQM
 
