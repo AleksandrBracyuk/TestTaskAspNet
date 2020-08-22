@@ -1,5 +1,5 @@
 # TestTaskAspNet
-тестовое задание на ASP.Net
+тестовое задание на ASP.Net: Web Service, Razor view, RestSharp client. 
 
 Как запустить и посмотреть - см. https://youtu.be/KvJBSj1lmQM
 
